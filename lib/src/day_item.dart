@@ -12,6 +12,8 @@ class DayItem extends StatelessWidget {
   final bool available;
   final Color? dotsColor;
   final Color? dayNameColor;
+  final double? dayTextSize;
+
 
   const DayItem({
     Key? key,
@@ -25,9 +27,10 @@ class DayItem extends StatelessWidget {
     this.available = true,
     this.dotsColor,
     this.dayNameColor,
+    this.dayTextSize = 32
   }) : super(key: key);
 
-  final double height = 70.0;
+  final double height = 75.0;
   final double width = 60.0;
 
   ///? I united both widgets to increase the touch target of non selected days by using a transparent box decorator.
@@ -42,7 +45,7 @@ class DayItem extends StatelessWidget {
       fontWeight: FontWeight.normal);
     final selectedStyle = TextStyle(
       color: activeDayColor ?? Colors.white,
-      fontSize: 32,
+      fontSize: dayTextSize,
       fontWeight: FontWeight.bold,
       height: 0.8,
     );
