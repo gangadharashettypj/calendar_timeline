@@ -28,6 +28,7 @@ class CalendarTimeline extends StatefulWidget {
   final Color? dotsColor;
   final Color? dayNameColor;
   final String? locale;
+  final double? dayTextSize;
 
   /// If true, it will show a separate row for the years.
   /// It defaults to false
@@ -48,6 +49,7 @@ class CalendarTimeline extends StatefulWidget {
     this.dotsColor,
     this.dayNameColor,
     this.locale,
+    this.dayTextSize,
     this.showYears = false,
   })  : assert(
           initialDate.difference(firstDate).inDays >= 0,
